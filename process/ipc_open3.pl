@@ -1,39 +1,3 @@
-# Perl Startup
-Learn perl basics.
-
-## Logging
-
-### Install Log4perl
-
-```bash
-# For Centos 6
-$ sudo yum update
-$ sudo yum install perl-Log-Log4perl
-```
-
-### Log information to a file
-
-```perl
-#!/usr/bin/perl
-# log4perl_easy2.pl
-
-use Log::Log4perl qw(:easy);
-
-Log::Log4perl->easy_init(
-  {
-    level => $DEBUG,
-    file => ">> /var/log/perllog",
-  },
-);
-
-DEBUG( "Write something to a log file." );
-```
-
-## Process Management and Communication
-
-### Controlling the Input, Output, and Error of Another Program
-
-```
 #!/usr/bin/perl
 # ipc_open3.pl
 use IPC::Open3;
@@ -58,5 +22,3 @@ waitpid($childpid, 0);
 if ($?) {
   print "That child exited with wait status of $?\n";
 }
-
-```
