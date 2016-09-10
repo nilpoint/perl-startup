@@ -1,6 +1,21 @@
 # Perl Startup
 Learn perl basics.
 
+## Arrays
+
+### Get the last index of an array
+
+```perl
+#!/usr/bin/perl
+# array_lastindex.pl
+
+my @colors = ( "red", "yellow", "blue", "green" );
+print "$#colors\n";
+
+my @empty = ();
+print "$#empty\n";
+```
+
 ## Logging
 
 ### Install Log4perl
